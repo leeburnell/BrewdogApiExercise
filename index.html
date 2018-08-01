@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+		<h1 class="logo"><a href="#">Brewdog API</a></h1>
+            <ul class="main-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blah</a></li>
+                <li><a href="#">Blah</a></li>
+            </ul>
+    </header> 
+
+    <section class="accordion">
+        <div class="container">
+            <button class="accordion_beer">Section 1</button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+            
+            <button class="accordion_beer">Section 2</button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+            
+            <button class="accordion_beer">Section 3</button>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="blue">
+        <div class="content">
+            <h2>Responsive Display</h2>
+            <div class="slider responsive">
+                
+                <div>
+                    <h3>1</h3>
+                </div>
+                <div>
+                    <div>
+                    <iframe width="100%" src="//www.youtube.com/embed/ubGpDoyJvmI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </div>
+                <div>
+                    <h3>3</h3>
+                </div>
+                <div>
+                    <h3>4</h3>
+                </div>
+                <div>
+                    <h3>5</h3>
+                </div>
+                <div>
+                    <h3>6</h3>
+                </div>
+                <div>
+                    <h3>7</h3>
+                </div>
+                <div>
+                    <h3>8</h3>
+                </div>
+                <div>
+                    <h3>9</h3>
+                </div>
+                <div>
+                    <h3>10</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+   
+    <section class="beer-listing">
+        <div class="container">
+                <ul id="beers">
+                    
+                </ul>
+        </div>
+    </section>
+    
+    
+    <script src="app.js"></script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+$('.responsive').slick({
+    // dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            // centerMode: true,
+
+        }
+
+    }, {
+        breakpoint: 800,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+            dots: true,
+            infinite: true,
+
+        }
+
+
+    }, {
+        breakpoint: 600,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            dots: true,
+            infinite: true,
+            
+        }
+    }, {
+        breakpoint: 480,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        }
+    }]
+});
+
+
+});
+</script>
+</body>
+</html>
