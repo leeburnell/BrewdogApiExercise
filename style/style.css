@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -59,6 +60,35 @@ a {
   border-top: none;
   border-right: none;
   border-left: none;
+}
+
+.hero-banner__image {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url("../images/alcohol-bar-bar-cafe-1324896.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/alcohol-bar-bar-cafe-1324896.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-banner__image--text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+}
+
+#features {
+  padding: 80px 0;
+}
+
+#features > h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* ================================= 
@@ -171,8 +201,27 @@ button.accordion_beer.active:after {
   width: auto;
 }
 
+.footer {
+  background-color: #333;
+  padding: 40px 0;
+  color: #fff;
+}
+
+.footer__nav--column {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.footer__nav--column > p {
+  text-align: center;
+}
+
 @media (max-width: 767px) {
-  #beers {
+  #beers, .footer__nav--column {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
   }
