@@ -68,6 +68,16 @@ const makeRequest = request('https://api.punkapi.com/v2/beers')
         });
     });
 
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+        document.getElementById("nav1").className = "nav-toggle-bar-black";
+    } else {
+        document.getElementById("nav1").className = "nav-toggle-bar";
+    }
+    }
+
     //BurgerMenu.js
     (function() {
 

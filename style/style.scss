@@ -72,7 +72,8 @@ a {
   
   .nav-toggle:hover { opacity: 0.8; }
   
-  .nav-toggle .nav-toggle-bar,  .nav-toggle .nav-toggle-bar::after,  .nav-toggle .nav-toggle-bar::before {
+	.nav-toggle .nav-toggle-bar,  .nav-toggle .nav-toggle-bar::after,  .nav-toggle .nav-toggle-bar::before,
+	.nav-toggle .nav-toggle-bar-black, .nav-toggle-bar-black::after,  .nav-toggle .nav-toggle-bar-black::before {
 	position: absolute;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -91,28 +92,33 @@ a {
   
   .nav-toggle .nav-toggle-bar { margin-top: 0; }
   
-  .nav-toggle .nav-toggle-bar::after { margin-top: 0.8rem; }
+  .nav-toggle .nav-toggle-bar::after, .nav-toggle .nav-toggle-bar-black::after { margin-top: 0.8rem; }
   
-  .nav-toggle .nav-toggle-bar::before { margin-top: -0.8rem; }
+  .nav-toggle .nav-toggle-bar::before, .nav-toggle .nav-toggle-bar-black::before { margin-top: -0.8rem; }
   
-  .nav-toggle.expanded .nav-toggle-bar { background: transparent; z-index: 2; }
+  .nav-toggle.expanded .nav-toggle-bar, .nav-toggle.expanded .nav-toggle-bar-black { background: transparent; z-index: 2; }
   
-  .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
+	.nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before, 
+	.nav-toggle.expanded .nav-toggle-bar-black::after, .nav-toggle.expanded .nav-toggle-bar-black::before  {
 	background: white;
 	margin-top: 0;
-  }
+	}
   
-  .nav-toggle.expanded .nav-toggle-bar::after {
+  .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar-black::after {
 	-ms-transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
   }
   
-  .nav-toggle.expanded .nav-toggle-bar::before {
+  .nav-toggle.expanded .nav-toggle-bar::before, .nav-toggle.expanded .nav-toggle-bar-black::before {
 	-ms-transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
-  }
+	}
+	
+	.nav-toggle .nav-toggle-bar-black, .nav-toggle-bar-black::after,  .nav-toggle .nav-toggle-bar-black::before{
+		background: #000;
+	}
 
 
 .hero-banner__image {
