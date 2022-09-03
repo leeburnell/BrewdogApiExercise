@@ -1,1 +1,1 @@
-# WorkTest
+JS API exercise
